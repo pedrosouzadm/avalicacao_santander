@@ -1,3 +1,5 @@
+package Exercicio_3;
+
 public class Operacoes {
     public static void soma( float x , float y) {
         System.out.println(x + y);
