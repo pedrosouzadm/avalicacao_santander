@@ -5,24 +5,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Scanner entrada = new Scanner(System.in);
-        float numeroUm = 0.0f;
-        float numeroDois = 0.0f;
+        Scanner scanner = new Scanner(System.in);
+        int numero = scanner.nextInt();
+        scanner.close();
 
-        System.out.println("Digite um Número: ");
-        numeroUm = entrada.nextFloat();
-
-        System.out.println("Digite um Número: ");
-        numeroDois = entrada.nextFloat();
-
-        Operacoes.soma(numeroUm,numeroDois);
-        Operacoes.substracao(numeroUm,numeroDois);
-        Operacoes.multiplicacao(numeroUm,numeroDois);
-        Operacoes.divisao(numeroUm,numeroDois);
-        entrada.close();
-
-
-
-
+        int triangulo = (numero % 2 == 0) ? numero / 2 : (numero / 2) + 1;
+        for (int i = 0; i < triangulo; i++) {
+            for (int j = triangulo - i; j > 1; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < 2 * i + 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
+
