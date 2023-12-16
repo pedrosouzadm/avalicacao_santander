@@ -10,6 +10,7 @@ public class Main {
         scanner.close();
 
         int triangulo = (numero % 2 == 0) ? numero / 2 : (numero / 2) + 1;
+
         for (int i = 0; i < triangulo; i++) {
             for (int j = triangulo - i; j > 1; j--) {
                 System.out.print(" ");
@@ -19,6 +20,7 @@ public class Main {
             }
             System.out.println();
         }
+
         for (int i = triangulo - 1; i >= 0; i--) {
             for (int j = 0; j < triangulo - i - 1; j++) {
                 System.out.print(" ");
